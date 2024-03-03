@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC29D5022B94618E0095B981 /* MeetingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29D5012B94618E0095B981 /* MeetingHeaderView.swift */; };
 		FC5702C42AE9804900F1DC16 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5702C32AE9804900F1DC16 /* CardView.swift */; };
 		FC717C6E2AF08AB600B10003 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC717C6D2AF08AB600B10003 /* DetailView.swift */; };
 		FC851BDA2AEA1DFC003D8929 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC851BD92AEA1DFC003D8929 /* ScrumsView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC29D5012B94618E0095B981 /* MeetingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingHeaderView.swift; sourceTree = "<group>"; };
 		FC5702C32AE9804900F1DC16 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FC717C6D2AF08AB600B10003 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FC851BD92AEA1DFC003D8929 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
@@ -89,10 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC5702C22AE9800200F1DC16 /* Presentations */ = {
+		FC29D5002B94616F0095B981 /* Meetings */ = {
 			isa = PBXGroup;
 			children = (
 				FCB77D2D2AE63F990049F0BB /* MeetingView.swift */,
+				FC29D5012B94618E0095B981 /* MeetingHeaderView.swift */,
+			);
+			path = Meetings;
+			sourceTree = "<group>";
+		};
+		FC5702C22AE9800200F1DC16 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				FC29D5002B94616F0095B981 /* Meetings */,
 				FC5702C32AE9804900F1DC16 /* CardView.swift */,
 				FC851BD92AEA1DFC003D8929 /* ScrumsView.swift */,
 				FC717C6D2AF08AB600B10003 /* DetailView.swift */,
@@ -311,6 +322,7 @@
 				FCFD439D2AFF643000F48895 /* ThemePicker.swift in Sources */,
 				FCEEBD5F2AE9729100B6CAF7 /* Theme.swift in Sources */,
 				FC717C6E2AF08AB600B10003 /* DetailView.swift in Sources */,
+				FC29D5022B94618E0095B981 /* MeetingHeaderView.swift in Sources */,
 				FCA7C1C32AE9F97900C4E15C /* TrailingIconLabelStyle.swift in Sources */,
 				FCB77D2E2AE63F990049F0BB /* MeetingView.swift in Sources */,
 				FC851BDA2AEA1DFC003D8929 /* ScrumsView.swift in Sources */,

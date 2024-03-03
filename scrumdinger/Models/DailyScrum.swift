@@ -8,8 +8,14 @@
 import Foundation
 
 struct DailyScrum: Identifiable {
-	let id: UUID
 	
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(id)
+		hasher.combine(title)
+	}
+
+	
+	let id: UUID
 	var title: String
 	var attendees: [Attendee]
 	var lengthInMinutes: Int
@@ -53,7 +59,7 @@ extension DailyScrum {
 	static let sampleData = [
 		DailyScrum(
 			title: "Design",
-		    attendees: ["Cathy", "Daisy", "Simon", "Jonathan"],
+			attendees: ["Cathy"],
 		    lengthInMinutes: 10,
 		    theme: .yellow
 		),

@@ -20,10 +20,12 @@ struct ThemePicker: View {
 			ThemeView(theme: Theme.indigo)
 				.tag("Private indigo")
 		}
-		.pickerStyle(NavigationLinkPickerStyle())
+		.pickerStyle(.navigationLink)
     }
 }
 
-#Preview {
-	ThemePicker(selection: Binding.constant(.periwinkle))
+struct ThemePicker_Previews: PreviewProvider {
+	static var previews: some View {
+		ThemePicker(selection: .constant(.bubblegum))
+	}
 }

@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct ScrumsView: View {
-	let scrums: [DailyScrum]
+	@Binding
+	var scrums: [DailyScrum]
 	
     var body: some View {
+		FirstScrumsListView(scrums: $scrums)
+    }
+}
+
+private struct FirstScrumsListView: View {
+	
+	@Binding
+	var scrums: [DailyScrum]
+	
+	var body: some View {
 		NavigationStack {
-			List(scrums) { scrum in
+			List($scrums) { $scrum in
 				NavigationLink(
-					destination: DetailView(scrum: scrum)
+					destination: DetailView(scrum: $scrum)
 				) {
 					CardView(scrum: scrum)
 				}
 				.listRowBackground(scrum.theme.mainColor)
+				
 			}
 			.navigationTitle("Daily Scrum")
 			.navigationBarTitleDisplayMode(.inline)
@@ -29,11 +41,11 @@ struct ScrumsView: View {
 				.accessibilityLabel("Add new scrum")
 			})
 		}
-    }
+	}
 }
 
 struct ScrumsView_Previews: PreviewProvider {
 	static var previews: some View {
-		ScrumsView(scrums: DailyScrum.sampleData)
+		ScrumsView(scrums: .constant(DailyScrum.sampleData))
 	}
 }
